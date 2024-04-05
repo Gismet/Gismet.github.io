@@ -1,0 +1,21 @@
+[
+  
+  {
+    "title": "Demo blog",
+    "url": "/posts/Demo/",
+    "categories": "Blogging, Demo",
+    "tags": "testing",
+    "date": "2024-04-05 07:33:00 +0400",
+    
+
+
+
+
+
+    
+    "snippet": "Hi, this is a demo blog  This is for testing purposes  This is for testing purposes  This is for testing purposes  This is for testing purposesParagraphTesting testing testing testing testing testi...",
+    "content": "Hi, this is a demo blog  This is for testing purposes  This is for testing purposes  This is for testing purposes  This is for testing purposesParagraphTesting testing testing testing testing testing testingLinkshttp://127.0.0.1:4000Inline codeThis is for testing purposes  to do          done      done      pending        First thing  Second thing  Unduly  More than you think is reasonable or necessery  Appetizing  Appetizing food makes you want to eatBlock quote  This is for testing purposesBinary exponentiation#include&lt;iostream&gt;#define ll long longll binpow(ll a, ll b){    ll res = 1LL;    while(b)    {        if(b&amp;1)            res = res * a;        a = a * a;        b&gt;&gt;=1;    }    return res;}int main(){    ll a = 3;    ll b = 8;    std::cout &lt;&lt; binpow(a, b);    return 0;}A little bit of mathematics\\[\\begin{equation}  \\sum_{n=1}^\\infty 1/n^2 = \\frac{\\pi^2}{6}  \\label{eq:series}\\end{equation}\\]\\[\\begin{equation}    \\sum_{n=0}^\\infty 1/n = \\infty\\end{equation}\\]We can reference the equation as \\eqref{eq:series}.ImagesFull screen width and center alignment"
+  }
+  
+]
+

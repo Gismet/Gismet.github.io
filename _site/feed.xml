@@ -1,0 +1,105 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Gismet Majidov</title>
+  <subtitle>Computer Science, technology, lifestyle and more
+ </subtitle>
+  <updated>2024-04-05T23:41:42+04:00</updated>
+  <author>
+    <name>Gismet Majidov</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024 Gismet Majidov </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Demo blog</title>
+    <link href="http://localhost:4000/posts/Demo/" rel="alternate" type="text/html" title="Demo blog" />
+    <published>2024-04-05T07:33:00+04:00</published>
+  
+    <updated>2024-04-05T22:58:35+04:00</updated>
+  
+    <id>http://localhost:4000/posts/Demo/</id>
+    <content src="http://localhost:4000/posts/Demo/" />
+    <author>
+      <name>Gismet Majidov</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Demo" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Hi, this is a demo blog
+
+
+  This is for testing purposes
+
+
+
+  This is for testing purposes
+
+
+
+  This is for testing purposes
+
+
+
+  This is for testing purposes
+
+
+Paragraph
+
+Testing testing testing testing testing testing testing
+
+Links
+http://127.0.0.1:4000
+
+Inline code
+
+This is for testing purposes
+
+
+  to do
+    
+      done
+      done
+      pending
+    
+  
+
+
+
+  First thing
+  Second thing
+
+
+
+  U...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
