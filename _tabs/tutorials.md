@@ -1,4 +1,5 @@
 ---
+layout: tutorials
 icon: fas fa-tags
 order: 5
 ---
