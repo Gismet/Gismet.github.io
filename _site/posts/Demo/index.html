@@ -275,7 +275,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a href="/" id="avatar" class="rounded-circle"><img src="https://avatars.githubusercontent.com/u/93595721?v=4" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
+    <a href="/" id="avatar" class="rounded-circle"><img src="https://avatars.githubusercontent.com/u/93595721?v=4" width="112" height="112" alt="avatar"></a>
 
     <h1 class="site-title">
       <a href="/">Gismet Majidov</a>
@@ -387,8 +387,8 @@
 
       
         <a
-          href="https://twitter.com/"
-          aria-label="twitter"
+          href="https://www.linkedin.com/in/gismet-majidov-61b069253"
+          aria-label="linkedin"
           
 
           
@@ -402,43 +402,7 @@
             rel="noopener noreferrer"
           
         >
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-      
-    
-      
-
-      
-        <a
-          href="javascript:location.href = 'mailto:' + ['',''].join('@')"
-          aria-label="email"
-          
-
-          
-
-          
-
-          
-        >
-          <i class="fas fa-envelope"></i>
-        </a>
-      
-    
-      
-
-      
-        <a
-          href="/feed.xml"
-          aria-label="rss"
-          
-
-          
-
-          
-
-          
-        >
-          <i class="fas fa-rss"></i>
+          <i class="fab fa-linkedin"></i>
         </a>
       
     
@@ -769,6 +733,9 @@
 <article class="px-1">
   <header>
     <h1 data-toc-skip>Demo blog</h1>
+    
+    <p class="post-desc fw-light mb-4">This is a demo blog for testing</p>
+    
 
     <div class="post-meta text-muted">
       <!-- published date -->
@@ -797,9 +764,9 @@
 
       <!-- lastmod date -->
       
-        <span>
-          Updated
-          <!--
+      <span>
+        Updated
+        <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -818,7 +785,7 @@
   Apr  5, 2024
 </time>
 
-        </span>
+      </span>
       
 
       
@@ -826,22 +793,27 @@
       <div class="d-flex justify-content-between">
         <!-- author(s) -->
         <span>
-          
+          <!-- 
 
-          By
+          By -->
 
           <em>
-            
+            <p>Written by <span>Gismet Majidov</span></p>
+            <!-- 
               
                 
                 
               
-            
+             -->
           </em>
         </span>
 
-        <!-- read time -->
-        <!-- Calculate the post's reading time, and display the word count in tooltip -->
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
@@ -865,10 +837,9 @@
 >
   <em>1 min</em> read</span>
 
+        </div>
       </div>
-      <!-- .d-flex -->
     </div>
-    <!-- .post-meta -->
   </header>
 
   <div class="content">
@@ -1011,38 +982,33 @@
   <div class="post-tail-wrapper text-muted">
     <!-- categories -->
     
-      <div class="post-meta mb-3">
-        <i class="far fa-folder-open fa-fw me-1"></i>
-        
-          <a href="/categories/blogging/">Blogging</a>,
-          <a href="/categories/demo/">Demo</a>
-      </div>
+    <div class="post-meta mb-3">
+      <i class="far fa-folder-open fa-fw me-1"></i>
+      
+      <a href="/categories/blogging/">Blogging</a>,
+      <a href="/categories/demo/">Demo</a>
+    </div>
     
 
     <!-- tags -->
     
-      <div class="post-tags">
-        <i class="fa fa-tags fa-fw me-1"></i>
-        
-          <a
-            href="/tags/testing/"
-            class="post-tag no-text-decoration"
-          >testing</a>
-        
-      </div>
+    <div class="post-tags">
+      <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a href="/tags/testing/" class="post-tag no-text-decoration">testing</a>
+      
+    </div>
     
 
-    <div
-      class="
+    <div class="
         post-tail-bottom
         d-flex justify-content-between align-items-center mt-5 pb-2
-      "
-    >
+      ">
       <div class="license-wrapper">
         
-          
+        
 
-          This post is licensed under 
+        This post is licensed under 
         <a href="https://creativecommons.org/licenses/by/4.0/">
           CC BY 4.0
         </a>
@@ -1101,7 +1067,6 @@
   </div>
   <!-- div.post-tail-wrapper -->
 </article>
-
 
             
           </main>
@@ -1262,40 +1227,32 @@
 
             
               
-              <!--  The comments switcher -->
+              <!-- The comments switcher -->
 
 
             
 
             <!-- The Footer -->
 
-<footer
-  aria-label="Site Info"
-  class="
+<footer aria-label="Site Info" class="
     d-flex flex-column justify-content-center text-muted
     flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
+  " style="font-size: 1rem;">
   <p>©
     <time>2024</time>
 
     
-      <a href="https://github.com/Gismet">Gismet Majidov</a>.
+    <a href="https://github.com/Gismet">Gismet Majidov</a>.
     
 
     
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
-      >Some rights reserved.</span>
+    <span data-bs-toggle="tooltip" data-bs-placement="top"
+      title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span>
     
   </p>
 
-  <p>Using the <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.
-  </p>
+  <p>Computer Science, technology, lifestyle and more</p>
 </footer>
-
           </div>
         </div>
 
@@ -1533,6 +1490,13 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
+<!-- Pageviews -->
+
+  
+
+  
+
+
 
 
 
@@ -1554,7 +1518,7 @@
     resultsContainer: document.getElementById('search-results'),
     json: '/assets/js/data/search.json',
     searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
-    noResultsText: '<p class="mt-5"></p>',
+    noResultsText: '<p class="mt-5">Oops! No results found.</p>',
     templateMiddleware: function(prop, value, template) {
       if (prop === 'categories') {
         if (value === '') {
