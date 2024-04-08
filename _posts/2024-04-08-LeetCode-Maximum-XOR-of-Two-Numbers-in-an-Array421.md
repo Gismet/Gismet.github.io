@@ -89,6 +89,7 @@ Now let's have a look at the code.
 > - `~x` `NOT` operator gives a number where all bits of `x` have been flipped (`0` turns into `1` and vise versa)
 > - `1 << k` bit mask of this form has a one bit in position k (0-indexed). The rest of the bits are zero. We use this bit mask to access a single bit of a number. You can combine this bit mask for different bit manipulation purposes, such as setting a bit to one or zero, flipping a particular bit.
 > - Last but not least, a postive integer `x` is a power of two if `x & (x - 1) == 0`.
+{: .prompt-tip}
 
 
 ```cpp
