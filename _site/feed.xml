@@ -5,7 +5,7 @@
   <title>Gismet Majidov</title>
   <subtitle>Computer Science, technology, lifestyle and more
  </subtitle>
-  <updated>2024-04-06T13:57:49+04:00</updated>
+  <updated>2024-04-09T12:47:49+04:00</updated>
   <author>
     <name>Gismet Majidov</name>
     <uri>http://localhost:4000/</uri>
@@ -21,23 +21,23 @@
 
   
   <entry>
-    <title>Demo blog</title>
-    <link href="http://localhost:4000/posts/Demo/" rel="alternate" type="text/html" title="Demo blog" />
-    <published>2024-04-05T07:33:00+04:00</published>
+    <title>LeetCode 2611. Mice and Cheese</title>
+    <link href="http://localhost:4000/posts/LeetCode-Mice-and-Cheese2611/" rel="alternate" type="text/html" title="LeetCode 2611. Mice and Cheese" />
+    <published>2024-04-09T08:50:00+04:00</published>
   
-    <updated>2024-04-05T22:58:35+04:00</updated>
+    <updated>2024-04-09T08:50:00+04:00</updated>
   
-    <id>http://localhost:4000/posts/Demo/</id>
-    <content src="http://localhost:4000/posts/Demo/" />
+    <id>http://localhost:4000/posts/LeetCode-Mice-and-Cheese2611/</id>
+    <content src="http://localhost:4000/posts/LeetCode-Mice-and-Cheese2611/" />
     <author>
       <name>Gismet Majidov</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="Problem-Solving" />
     
-    <category term="Demo" />
+    <category term="LeetCode" />
     
   
 
@@ -49,52 +49,118 @@
 
 
 
-      Hi, this is a demo blog
+      2611. Mice and Cheese
+
+There are two mice and n different types of cheese, each type of cheese should be eaten by exactly one mouse.
+
+A point of the cheese with index i (0-indexed) is:
 
 
-  This is for testing purposes
+  reward1[i] if the first mouse eats it.
+  reward2[i] if the second mouse eats it.
 
 
+You are given a positive integer array reward1, a positive integer array reward2, and a non-negative integer k.
 
-  This is for testing purposes
+Return the m...
+    </summary>
+  
 
+  </entry>
 
+  
+  <entry>
+    <title>LeetCode -678 Valid Parenthesis String</title>
+    <link href="http://localhost:4000/posts/Valid-Parenthesis-String-678/" rel="alternate" type="text/html" title="LeetCode -678 Valid Parenthesis String" />
+    <published>2024-04-08T14:58:00+04:00</published>
+  
+    <updated>2024-04-09T00:48:09+04:00</updated>
+  
+    <id>http://localhost:4000/posts/Valid-Parenthesis-String-678/</id>
+    <content src="http://localhost:4000/posts/Valid-Parenthesis-String-678/" />
+    <author>
+      <name>Gismet Majidov</name>
+    </author>
 
-  This is for testing purposes
-
-
-
-  This is for testing purposes
-
-
-Paragraph
-
-Testing testing testing testing testing testing testing
-
-Links
-http://127.0.0.1:4000
-
-Inline code
-
-This is for testing purposes
-
-
-  to do
+  
     
-      done
-      done
-      pending
+    <category term="Problem-Solving" />
+    
+    <category term="LeetCode" />
     
   
 
+  
+    <summary>
+      
 
 
-  First thing
-  Second thing
 
 
 
-  U...
+      678 Valid Parenthesis string
+
+Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
+
+The following rules define a valid string:
+
+
+  Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+  Any right parenthesis ')' must have a corresponding left parenthesis '('.
+  Left parenthesis '(' must go before the corresponding right pa...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>LeetCode 421. Maximum XOR of Two Numbers in an Array</title>
+    <link href="http://localhost:4000/posts/LeetCode-Maximum-XOR-of-Two-Numbers-in-an-Array421/" rel="alternate" type="text/html" title="LeetCode 421. Maximum XOR of Two Numbers in an Array" />
+    <published>2024-04-07T08:58:00+04:00</published>
+  
+    <updated>2024-04-08T17:34:30+04:00</updated>
+  
+    <id>http://localhost:4000/posts/LeetCode-Maximum-XOR-of-Two-Numbers-in-an-Array421/</id>
+    <content src="http://localhost:4000/posts/LeetCode-Maximum-XOR-of-Two-Numbers-in-an-Array421/" />
+    <author>
+      <name>Gismet Majidov</name>
+    </author>
+
+  
+    
+    <category term="Problem-Solving" />
+    
+    <category term="LeetCode" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      421 Maximum XOR of Two Numbers in an Array
+
+Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 &amp;lt;= i &amp;lt;= j &amp;lt; n.
+
+Example 1:
+
+Input: nums = [3,10,5,25,2,8] 
+Output: 28 
+Explanation: The maximum result is 5 XOR 25 = 28.
+
+Example 2:
+
+Input: nums = [14,70,53,83,49,91,36,80,92,51,66,70] 
+Output: 127
+
+Approach
+
+When is the value of a ^ b maximum ? To answer ...
     </summary>
   
 
