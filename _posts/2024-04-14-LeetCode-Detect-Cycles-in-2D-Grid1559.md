@@ -107,13 +107,16 @@ In fact, you are almost right. Let's not visited the nodes we have visited. But 
 
 Let's look at the code.
 
+
+
 ## Code
 
 ```cpp
 #define vv std::vector
-vv<vv<int>> dirs = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}}; // this shows directions
+vv<vv<int>> dirs = { {1, 0}, {0, 1}, {-1, 0}, {0, -1} }; // this shows directions
 //For example row = 1, column = 1. row = row + dirs[0][0] = 1 + 1 = 2
 //column = column + dirs[0][1] = 1 + 0 = 1. Effectively, this takes us one row down
+
 
 
 static int speedup = []() {std::ios_base::sync_with_stdio(false); std::cin.tie(NULL); return 1;}();
