@@ -43,7 +43,7 @@ Return the **number of pairs** that satisfy the conditions.
 *Since there does not exist any pair that satisfies the conditions, we return 0.*
 
 
-# Brute force solution
+## Brute force solution
 
 One possible solution is to try all `(i, j)` pairs and find those that satisfy our conditions.
 
@@ -79,7 +79,7 @@ We concluded that the algorithm is slow although correct. So we have to pursue o
 Effectively, we have to look for something faster than $O(n^2)$, maybe $O(n log(n))$ or $O(n)$
 
 
-# A different perspective
+## A different perspective
 
 Let's try to deduce something from the problem description that would help us solve problem more efficiently.
 
@@ -161,6 +161,7 @@ That's essentially it. The key to solve this problem is to do the necessary tran
 
 Let's have a look at the code.
 
+## Code
 ```cpp
 //necessary includes for ordered_set
 #include <ext/pb_ds/assoc_container.hpp>
