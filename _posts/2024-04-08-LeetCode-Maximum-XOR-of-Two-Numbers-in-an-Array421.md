@@ -24,7 +24,7 @@ Given an integer array nums, return the maximum result of `nums[i] XOR nums[j]`,
 **Output: 127**
 
 
-# Approach 
+## Approach 
 
 When is the value of `a ^ b` maximum ? To answer the question let's see an example. 
 
@@ -92,6 +92,7 @@ Now let's have a look at the code.
 {: .prompt-tip}
 
 
+## Code
 ```cpp
 //Build the trie on the given array
 //Then search the complement of each number in the trie
