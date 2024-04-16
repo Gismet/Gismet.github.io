@@ -83,7 +83,7 @@ We will keep track of the cells we visit, and once we see a cell that has alread
 
 All of the values in the cycle have to be the same. Let's say we are at a cell with value `c` and want to go down one cell. If that cell does not have the value `c`, we can't go to that cell as it does not belong to the path we are following. So, we only go to the cells with the same value as the cell we are currently at. If there are no cells that we can go to, we return `false`. We repeat this process from every unvisited cell. 
 
-Let's first how we can traverse a `grid`. We can traverse a `grid` (or somtimes called `matrix`) row by row. We can simply do this with *nested for loops*. However, that is not what we want in this problem. 
+Let's first see how we can traverse a `grid`. We can traverse a `grid` (or somtimes called `matrix`) row by row. We can simply do this with *nested for loops*. However, that is not what we want in this problem. 
 
 We can view the `grid` as a graph. For example, let's see the `grid` from example 1.
 
@@ -103,7 +103,7 @@ Let's see another example.
 
 In the above example, you can see that we start at the top-left node again. We go down a node and we go down one node again. Now we can't go down or left as there are no nodes (outside of grid). We can only one node up or to the right. We can't go to the right node becaues it does not have the same value as the current node. So the only option is to go up one node, which has the same value as the current node. But if we go up, we go back to the node we just came from. Now since this code has been visited, we conclude that we found a cycle, which is a false alarm. That is not a cycle. First of all, the problem states that a cycle has a length of **4 or more**. We have only 3 nodes in this path. Secondly, this path does not even end at where we started. That means it does not form a cycle. So you might be thinking "Okay, let's not visit the nodes we have already visited". But then how could we find out that we have a cycle. Because our idea is based on the fact that once we see a visited cell or node, we stop as this forms a cycle. 
 
-In fact, you are almost right. Let's not visited the nodes we have visited. But that does not apply to every node. We will not visit only the immediate node we came from. In other words, we do not go back. For example, if you came to the current cell from one cell up, then your only options are down, left or right cells. You can't go back to the above node. If you can't neither down nor left nor right, we stop traversing, reasing that we couldn't find a cycle. In case of linked list problem, we didn't actually have this issue. Because we only traversed forward. Only node that took us back was the node that formed the cycle. 
+In fact, you are almost right. Let's not visite the nodes we have visited. But that does not apply to every node. We will not visit only the immediate node we came from. In other words, we do not go back. For example, if you came to the current cell from one cell up, then your only options are down, left or right cells. You can't go back to the above node. If you can't neither down nor left nor right, we stop traversing, reasing that we couldn't find a cycle. In case of linked list problem, we didn't actually have this issue. Because we only traversed forward. Only node that took us back was the node that formed the cycle. 
 
 Let's look at the code.
 
