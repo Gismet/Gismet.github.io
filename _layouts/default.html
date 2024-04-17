@@ -9,79 +9,143 @@ layout: compress
 {% include lang.html %}
 
 {% if site.theme_mode %}
-  {% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
+{% capture prefer_mode %}data-mode="{{ site.theme_mode }}"{% endcapture %}
 {% endif %}
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ page.lang | default: site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {% include sidebar.html lang=lang %}
+<body>
+  {% include sidebar.html lang=lang %}
 
-    <div id="main-wrapper" class="d-flex justify-content-center">
-      <div class="container d-flex flex-column px-xxl-5">
-        {% include topbar.html lang=lang %}
+  <div id="main-wrapper" class="d-flex justify-content-center">
+    <div class="container d-flex flex-column px-xxl-5">
+      {% include topbar.html lang=lang %}
 
-        <div class="row flex-grow-1">
-          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            {% if layout.refactor or layout.layout == 'default' %}
-              {% include refactor-content.html content=content lang=lang %}
-            {% else %}
-              {{ content }}
-            {% endif %}
-          </main>
+      <div class="row flex-grow-1">
+        <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+          {% if layout.refactor or layout.layout == 'default' %}
+          {% include refactor-content.html content=content lang=lang %}
+          {% else %}
+          {{ content }}
+          {% endif %}
+        </main>
 
-          <!-- panel -->
-          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
-            <div class="access">
-              {% include_cached update-list.html lang=lang %}
-              {% include_cached trending-tags.html lang=lang %}
-            </div>
-
-            {% for _include in layout.panel_includes %}
-              {% assign _include_path = _include | append: '.html' %}
-              {% include {{ _include_path }} lang=lang %}
-            {% endfor %}
-          </aside>
-        </div>
-
-        <div class="row">
-          <!-- tail -->
-          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
-            {% for _include in layout.tail_includes %}
-              {% assign _include_path = _include | append: '.html' %}
-              {% include {{ _include_path }} lang=lang %}
-            {% endfor %}
-
-            {% include_cached footer.html lang=lang %}
+        <!-- panel -->
+        <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+          <div class="access">
+            {% include_cached update-list.html lang=lang %}
+            {% include_cached trending-tags.html lang=lang %}
           </div>
-        </div>
 
-        {% include_cached search-results.html lang=lang %}
+          {% for _include in layout.panel_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+          {% endfor %}
+        </aside>
       </div>
 
-      <aside aria-label="Scroll to Top">
-        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
-          <i class="fas fa-angle-up"></i>
-        </button>
-      </aside>
+      <div class="row">
+        <!-- tail -->
+        <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+          {% for _include in layout.tail_includes %}
+          {% assign _include_path = _include | append: '.html' %}
+          {% include {{ _include_path }} lang=lang %}
+          {% endfor %}
+          <script type="text/javascript">
+            (function () {
+              const origin = 'https://giscus.app';
+              const iframe = 'iframe.giscus-frame';
+              const lightTheme = 'light';
+              const darkTheme = 'dark_dimmed';
+
+              let initTheme = lightTheme;
+              const html = document.documentElement;
+
+              if (
+                (html.hasAttribute('data-mode') &&
+                  html.getAttribute('data-mode') === 'dark') ||
+                (!html.hasAttribute('data-mode') &&
+                  window.matchMedia('(prefers-color-scheme: dark)').matches)
+              ) {
+                initTheme = darkTheme;
+              }
+
+              let giscusAttributes = {
+                src: "https://giscus.app/client.js",
+                'data-repo': "Gismet/Gismet.github.io",
+                'data-repo-id': "R_kgDOLqSXyA",
+                'data-category': "Comments",
+                'data-category-id': "DIC_kwDOLqSXyM4CeuzM",
+                'data-mapping': "pathname",
+                'data-strict': "0",
+                'data-reactions-enabled': "1",
+                'data-emit-metadata': "0",
+                'data-input-position': "bottom",
+                'data-theme': "preferred_color_scheme",
+                'data-lang': "en",
+                crossorigin: "anonymous",
+                async: ''
+              };
+
+              let giscusScript = document.createElement('script');
+              Object.entries(giscusAttributes).forEach(([key, value]) =>
+                giscusScript.setAttribute(key, value)
+              );
+              document.getElementById('tail-wrapper').appendChild(giscusScript);
+
+              addEventListener('message', (event) => {
+                if (
+                  event.source === window &&
+                  event.data &&
+                  event.data.direction === ModeToggle.ID
+                ) {
+                  /* global theme mode changed */
+                  const mode = event.data.message;
+                  const theme = mode === ModeToggle.DARK_MODE ? darkTheme : lightTheme;
+
+                  const message = {
+                    setConfig: {
+                      theme: theme
+                    }
+                  };
+
+                  const giscus = document.querySelector(iframe).contentWindow;
+                  giscus.postMessage({ giscus: message }, origin);
+                }
+              });
+            })();
+          </script>
+          {% include_cached footer.html lang=lang %}
+        </div>
+      </div>
+
+      {% include_cached search-results.html lang=lang %}
     </div>
 
-    <div id="mask"></div>
+    <aside aria-label="Scroll to Top">
+      <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+        <i class="fas fa-angle-up"></i>
+      </button>
+    </aside>
+  </div>
 
-    {% if site.pwa.enabled %}
-      {% include_cached notification.html lang=lang %}
-    {% endif %}
+  <div id="mask"></div>
 
-    <!-- JavaScripts -->
+  {% if site.pwa.enabled %}
+  {% include_cached notification.html lang=lang %}
+  {% endif %}
 
-    {% include js-selector.html lang=lang %}
+  <!-- JavaScripts -->
 
-    {% if page.mermaid %}
-      {% include mermaid.html %}
-    {% endif %}
+  {% include js-selector.html lang=lang %}
 
-    {% include_cached search-loader.html lang=lang %}
-  </body>
+  {% if page.mermaid %}
+  {% include mermaid.html %}
+  {% endif %}
+
+  {% include_cached search-loader.html lang=lang %}
+</body>
+
 </html>
